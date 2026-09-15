@@ -30,8 +30,10 @@ rel="stylesheet">
 content="Ph.D. Candidate at Rice University studying identity, inequality, and psychological intervention.">
 <meta property="og:image"
 content="https://hwayeonmyeong.com/portrait_blacksuit.jpg">
+<meta property="og:image:alt"
+content="Hwayeon Myeong at Rice University">
 
-<!-- Twitter -->
+<!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hwayeon Myeong">
 <meta name="twitter:description"
@@ -44,6 +46,8 @@ content="https://hwayeonmyeong.com/portrait_blacksuit.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 
 <!-- Structured Data -->
 <script type="application/ld+json">
@@ -75,9 +79,9 @@ content="https://hwayeonmyeong.com/portrait_blacksuit.jpg">
 
 <style>
 
-/* ------------------------------
+/* --------------------------------
    GLOBAL
------------------------------- */
+-------------------------------- */
 
 * {
     box-sizing: border-box;
@@ -96,9 +100,9 @@ body {
 }
 
 
-/* ------------------------------
+/* --------------------------------
    TOP NAVIGATION
------------------------------- */
+-------------------------------- */
 
 .topbar {
     width: 100%;
@@ -119,6 +123,7 @@ body {
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.22em;
+
     color: #17345c;
     text-decoration: none;
 }
@@ -145,45 +150,43 @@ nav a:hover {
 }
 
 
-/* ------------------------------
+/* --------------------------------
    HERO
------------------------------- */
+-------------------------------- */
 
 .hero {
     min-height: 100vh;
+
     display: grid;
     grid-template-columns: 47% 53%;
+
     background: #f7f4ed;
 }
 
 
-/* LEFT SIDE */
+/* --------------------------------
+   LEFT SIDE
+-------------------------------- */
 
 .hero-copy {
     display: flex;
     align-items: center;
-    padding: 120px 6% 80px 8%;
+
+    padding: 125px 6% 80px 8%;
 }
 
 .hero-copy-inner {
     max-width: 650px;
 }
 
-.eyebrow {
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 0.76rem;
-    font-weight: 500;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: #a77a43;
-    margin-bottom: 28px;
-}
+
+/* NAME */
 
 h1 {
     font-family: "Cormorant Garamond", Georgia, serif;
 
     font-size: clamp(5.2rem, 7.4vw, 8rem);
-    line-height: 0.77;
+    line-height: 0.78;
 
     font-weight: 500;
     letter-spacing: -0.045em;
@@ -193,40 +196,54 @@ h1 {
     text-transform: uppercase;
 }
 
+
+/* GOLD ACCENT */
+
 .gold-line {
     width: 88px;
     height: 3px;
+
     background: #b68a4b;
-    margin: 38px 0 30px;
+
+    margin: 40px 0 31px;
 }
+
+
+/* POSITION */
 
 .position {
     font-family: "Cormorant Garamond", Georgia, serif;
+
     font-size: 2rem;
-    line-height: 1.15;
+    line-height: 1.2;
+
     color: #17345c;
-    margin-bottom: 30px;
+
+    margin-bottom: 31px;
 }
 
+
+/* RESEARCH DESCRIPTION */
+
 .research-summary {
-    max-width: 590px;
+    max-width: 600px;
 
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 1.5rem;
-    line-height: 1.45;
+
+    font-size: 1.52rem;
+    line-height: 1.48;
 
     color: #31445e;
 
-    margin-bottom: 38px;
+    margin-bottom: 40px;
 }
 
-.research-summary strong {
-    font-weight: 600;
-}
+
+/* LINKS */
 
 .links {
     display: flex;
-    gap: 27px;
+    gap: 28px;
     flex-wrap: wrap;
 }
 
@@ -235,12 +252,14 @@ h1 {
     text-decoration: none;
 
     font-family: "Inter", Arial, sans-serif;
-    font-size: 0.82rem;
+
+    font-size: 0.78rem;
     font-weight: 500;
 
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
 
     border-bottom: 1px solid #b68a4b;
+
     padding-bottom: 5px;
 
     transition: opacity 0.2s ease;
@@ -251,7 +270,9 @@ h1 {
 }
 
 
-/* RIGHT-SIDE PORTRAIT */
+/* --------------------------------
+   RIGHT-SIDE PORTRAIT
+-------------------------------- */
 
 .hero-photo {
     height: 100vh;
@@ -261,29 +282,33 @@ h1 {
 .hero-photo img {
     width: 100%;
     height: 100%;
+
     display: block;
 
     object-fit: cover;
 
     /*
-       Adjust this if you want your face slightly
-       farther left or right.
+       Change this if you want to move
+       the portrait left or right.
     */
     object-position: center center;
 }
 
 
-/* ------------------------------
-   MOBILE
------------------------------- */
+/* --------------------------------
+   TABLET / MOBILE
+-------------------------------- */
 
 @media (max-width: 900px) {
 
     .topbar {
         position: relative;
+
         padding: 22px 7%;
+
         flex-direction: column;
         align-items: flex-start;
+
         gap: 18px;
     }
 
@@ -295,16 +320,13 @@ h1 {
     .hero {
         display: flex;
         flex-direction: column;
-        min-height: auto;
-    }
 
-    .hero-copy {
-        order: 2;
-        padding: 55px 8% 70px;
+        min-height: auto;
     }
 
     .hero-photo {
         order: 1;
+
         width: 100%;
         height: 65vh;
         min-height: 500px;
@@ -312,6 +334,12 @@ h1 {
 
     .hero-photo img {
         object-position: center 25%;
+    }
+
+    .hero-copy {
+        order: 2;
+
+        padding: 58px 8% 72px;
     }
 
     h1 {
@@ -328,9 +356,15 @@ h1 {
 }
 
 
-/* SMALL PHONE */
+/* --------------------------------
+   SMALL PHONE
+-------------------------------- */
 
 @media (max-width: 520px) {
+
+    .brand {
+        font-size: 0.78rem;
+    }
 
     nav {
         gap: 15px;
@@ -349,10 +383,17 @@ h1 {
         padding: 45px 7% 60px;
     }
 
-    .eyebrow {
-        font-size: 0.67rem;
+    h1 {
+        line-height: 0.82;
     }
 
+    .gold-line {
+        margin: 32px 0 27px;
+    }
+
+    .research-summary {
+        line-height: 1.5;
+    }
 }
 
 </style>
@@ -363,9 +404,9 @@ h1 {
 <body>
 
 
-<!-- ==============================
-     NAVIGATION
-============================== -->
+<!-- ===================================
+     TOP NAVIGATION
+=================================== -->
 
 <header class="topbar">
 
@@ -375,7 +416,9 @@ HWAYEON MYEONG
 
 <nav>
 
-<a href="story.html">My Story</a>
+<a href="story.html">
+My Story
+</a>
 
 <a href="Hwayeon_Myeong_CV.pdf?v=20260913"
 target="_blank">
@@ -397,9 +440,9 @@ Contact
 
 
 
-<!-- ==============================
+<!-- ===================================
      HERO
-============================== -->
+=================================== -->
 
 <main class="hero">
 
@@ -410,16 +453,15 @@ Contact
 
 <div class="hero-copy-inner">
 
-<div class="eyebrow">
-SOCIAL PSYCHOLOGY &nbsp; / &nbsp; IDENTITY &nbsp; / &nbsp; EQUITY
-</div>
 
 <h1>
 Hwayeon<br>
 Myeong
 </h1>
 
+
 <div class="gold-line"></div>
+
 
 <div class="position">
 Ph.D. Candidate<br>
@@ -430,8 +472,8 @@ Rice University
 <div class="research-summary">
 
 I study how social contexts shape people's identity experiences,
-how people make meaning of who they are, and how
-identity-focused interventions can promote more equitable outcomes.
+how people make meaning of who they are, and how identity-focused
+interventions can promote more equitable outcomes.
 
 </div>
 
@@ -457,6 +499,7 @@ CONTACT
 </a>
 
 </div>
+
 
 </div>
 
