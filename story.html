@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Story | Hwayeon Myeong</title>
+
+<meta name="description"
+content="The personal journey behind Hwayeon Myeong's research on identity, work-family experiences, and inequality.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* --------------------------
+   GLOBAL
+-------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f4ed;
+    color: #17345c;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+
+/* --------------------------
+   NAVIGATION
+-------------------------- */
+
+.topbar {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 5.5%;
+
+    border-bottom: 1px solid rgba(23,52,92,0.12);
+}
+
+.brand {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+
+    color: #17345c;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 31px;
+}
+
+nav a {
+    color: #17345c;
+    text-decoration: none;
+
+    font-size: 0.88rem;
+
+    transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+    opacity: 0.55;
+}
+
+
+/* --------------------------
+   PAGE INTRO
+-------------------------- */
+
+.page-intro {
+    text-align: center;
+
+    max-width: 850px;
+    margin: 0 auto;
+
+    padding: 90px 8% 65px;
+}
+
+.page-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    color: #aa7e47;
+
+    margin-bottom: 22px;
+}
+
+h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: #17345c;
+
+    margin-bottom: 25px;
+}
+
+.gold-line {
+    width: 58px;
+    height: 2px;
+
+    background: #b68a4b;
+
+    margin: 0 auto 27px;
+}
+
+.subtitle {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.5rem;
+    line-height: 1.5;
+
+    font-style: italic;
+
+    color: #45566d;
+}
+
+
+/* --------------------------
+   STORY SECTION
+-------------------------- */
+
+.story {
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 25px 6% 110px;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+/* PHOTO */
+
+.story-photo img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* TEXT */
+
+.story-text {
+    padding-top: 6px;
+}
+
+.story-text p {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.35rem;
+    line-height: 1.62;
+
+    color: #31445e;
+
+    margin-bottom: 23px;
+}
+
+.story-text blockquote {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.75rem;
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    color: #17345c;
+
+    border-left: 3px solid #b68a4b;
+
+    padding: 3px 0 3px 27px;
+
+    margin: 38px 0;
+}
+
+
+/* --------------------------
+   FOOTER
+-------------------------- */
+
+footer {
+    border-top: 1px solid rgba(23,52,92,0.12);
+
+    padding: 36px 6%;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 0.78rem;
+
+    color: #687589;
+}
+
+footer a {
+    color: #17345c;
+    text-decoration: none;
+}
+
+
+/* --------------------------
+   MOBILE
+-------------------------- */
+
+@media (max-width: 850px) {
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 18px;
+
+        padding: 23px 7%;
+    }
+
+    nav {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .page-intro {
+        padding: 70px 8% 50px;
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 10px 8% 75px;
+    }
+
+    .story-photo {
+        max-width: 600px;
+
+        margin: 0 auto;
+    }
+
+    .story-text p {
+        font-size: 1.23rem;
+    }
+
+    .story-text blockquote {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .brand {
+        font-size: 0.78rem;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAV -->
+
+<header class="topbar">
+
+<a class="brand" href="index.html">
+HWAYEON MYEONG
+</a>
+
+<nav>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="Hwayeon_Myeong_CV.pdf?v=20260913"
+target="_blank">
+CV
+</a>
+
+<a href="https://scholar.google.com/citations?user=lbe5XxYAAAAJ&hl=en&oi=ao"
+target="_blank">
+Scholar
+</a>
+
+<a href="mailto:hm60@rice.edu">
+Contact
+</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- INTRO -->
+
+<section class="page-intro">
+
+<div class="page-label">
+MY STORY
+</div>
+
+<h1>
+How I Came to This Work
+</h1>
+
+<div class="gold-line"></div>
+
+<div class="subtitle">
+My experiences as an immigrant, a mother, and a scholar continue
+to shape the questions I ask as a researcher.
+</div>
+
+</section>
+
+
+
+<!-- STORY -->
+
+<main class="story">
+
+
+<!-- PHOTO -->
+
+<section class="story-photo">
+
+<img
+src="mother-son.jpg"
+alt="Hwayeon Myeong with her son at Rice University">
+
+</section>
+
+
+
+<!-- TEXT -->
+
+<section class="story-text">
+
+<p>
+My interest in identity integration is also personal.
+</p>
+
+<p>
+As a new immigrant mother in the United States, I often encountered
+the message that pursuing an ambitious career was difficult to reconcile
+with being a devoted mother. After stepping away from academia for several
+years, returning meant investing considerable time in rebuilding my
+professional connections, strengthening my English, and preparing for an
+academic career without any guarantee of immediate financial return.
+</p>
+
+<p>
+For a time, I struggled with the feeling that being the kind of mother
+I wanted to be and pursuing the career I wanted might require incompatible
+versions of myself.
+</p>
+
+<p>
+Eventually, that changed. Motherhood became an important source of
+questions and insights for my research, while my work as a scholar became
+another way to show my son the value of curiosity, persistence, and
+lifelong learning.
+</p>
+
+<blockquote>
+The identities themselves had not changed.
+What changed was how I understood the relationship between them.
+</blockquote>
+
+<p>
+That experience continues to shape a question at the heart of my research:
+Why are some people better able than others to experience their multiple
+identities as compatible, and how does the social environment make that
+integration easier or harder?
+</p>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+<div>
+© 2026 Hwayeon Myeong
+</div>
+
+<div>
+<a href="index.html">Home</a>
+&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="mailto:hm60@rice.edu">Contact</a>
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
