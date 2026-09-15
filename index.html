@@ -4,40 +4,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Hwayeon Myeong</title>
 
 <meta name="description"
-content="Hwayeon Myeong is a Ph.D. Candidate in the Department of Psychological Sciences at Rice University studying identity, work-family interfaces, interventions, and intergroup relations.">
+content="Hwayeon Myeong is a Ph.D. Candidate at Rice University studying identity, inequality, work-family experiences, and psychological interventions.">
 
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#17345c">
+<meta name="theme-color" content="#f7f4ed">
 
 <link rel="canonical" href="https://hwayeonmyeong.com/">
-<link rel="preload" as="image" href="/hero.png">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap"
+rel="stylesheet">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hwayeonmyeong.com/">
 <meta property="og:title" content="Hwayeon Myeong">
-<meta property="og:description" content="Ph.D. Candidate in the Department of Psychological Sciences at Rice University.">
-<meta property="og:image" content="https://hwayeonmyeong.com/hero.png">
-<meta property="og:image:alt" content="Hwayeon Myeong academic website">
+<meta property="og:description"
+content="Ph.D. Candidate at Rice University studying identity, inequality, and psychological intervention.">
+<meta property="og:image"
+content="https://hwayeonmyeong.com/portrait_blacksuit.jpg">
 
-<!-- Twitter / X -->
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hwayeon Myeong">
-<meta name="twitter:description" content="Ph.D. Candidate in the Department of Psychological Sciences at Rice University.">
-<meta name="twitter:image" content="https://hwayeonmyeong.com/hero.png">
+<meta name="twitter:description"
+content="Ph.D. Candidate at Rice University studying identity, inequality, and psychological intervention.">
+<meta name="twitter:image"
+content="https://hwayeonmyeong.com/portrait_blacksuit.jpg">
 
 <!-- Favicon -->
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 
-<!-- Structured data -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -45,7 +53,7 @@ content="Hwayeon Myeong is a Ph.D. Candidate in the Department of Psychological 
     "name": "Hwayeon Myeong",
     "url": "https://hwayeonmyeong.com/",
     "jobTitle": "Ph.D. Candidate",
-    "description": "Ph.D. Candidate in the Department of Psychological Sciences at Rice University.",
+    "description": "Ph.D. Candidate at Rice University studying identity, inequality, work-family experiences, and psychological interventions.",
     "affiliation": {
         "@type": "CollegeOrUniversity",
         "name": "Rice University",
@@ -56,8 +64,9 @@ content="Hwayeon Myeong is a Ph.D. Candidate in the Department of Psychological 
     ],
     "knowsAbout": [
         "Identity",
-        "Work-family interfaces",
-        "Interventions",
+        "Work-family interface",
+        "Gender inequality",
+        "Psychological interventions",
         "Intergroup relations",
         "Industrial-organizational psychology"
     ]
@@ -65,111 +74,409 @@ content="Hwayeon Myeong is a Ph.D. Candidate in the Department of Psychological 
 </script>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+
+/* ------------------------------
+   GLOBAL
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-body{
-    background:#f6f3ec;
-    font-family: Georgia,"Times New Roman",serif;
-    color:#17345c;
+
+html {
+    scroll-behavior: smooth;
 }
-.hero{
-    height:100vh;
-    background-image:url("hero.png");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    display:flex;
-    align-items:center;
+
+body {
+    background: #f7f4ed;
+    color: #17345c;
+    font-family: "Inter", Arial, sans-serif;
 }
-.content{
-    width:42%;
-    min-width:380px;
-    margin-left:6%;
+
+
+/* ------------------------------
+   TOP NAVIGATION
+------------------------------ */
+
+.topbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 5.5%;
 }
-h1{
-    font-size:6rem;
-    font-weight:400;
-    line-height:.95;
-    letter-spacing:-2px;
-    color:#17345c;
+
+.brand {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    color: #17345c;
+    text-decoration: none;
 }
-.line{
-    width:85px;
-    height:2px;
-    background:#b79263;
-    margin:34px 0;
+
+nav {
+    display: flex;
+    gap: 31px;
+    align-items: center;
 }
-.description{
-    font-size:1.75rem;
-    line-height:1.6;
-    color:#444;
-    margin-bottom:50px;
+
+nav a {
+    color: #17345c;
+    text-decoration: none;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 400;
+
+    transition: opacity 0.2s ease;
 }
-nav{
-    display:flex;
-    gap:38px;
+
+nav a:hover {
+    opacity: 0.55;
 }
-nav a{
-    color:#17345c;
-    text-decoration:none;
-    font-size:1.3rem;
-    border-bottom:1.5px solid #17345c;
-    padding-bottom:3px;
-    transition:.2s;
+
+
+/* ------------------------------
+   HERO
+------------------------------ */
+
+.hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 47% 53%;
+    background: #f7f4ed;
 }
-nav a:hover{
-    opacity:.6;
-    transform:translateY(-2px);
+
+
+/* LEFT SIDE */
+
+.hero-copy {
+    display: flex;
+    align-items: center;
+    padding: 120px 6% 80px 8%;
 }
-@media(max-width:900px){
-.hero{
-    background-position:68% center;
+
+.hero-copy-inner {
+    max-width: 650px;
 }
-.content{
-    width:80%;
-    min-width:0;
+
+.eyebrow {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #a77a43;
+    margin-bottom: 28px;
 }
-h1{
-    font-size:4rem;
+
+h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(5.2rem, 7.4vw, 8rem);
+    line-height: 0.77;
+
+    font-weight: 500;
+    letter-spacing: -0.045em;
+
+    color: #17345c;
+
+    text-transform: uppercase;
 }
-.description{
-    font-size:1.25rem;
+
+.gold-line {
+    width: 88px;
+    height: 3px;
+    background: #b68a4b;
+    margin: 38px 0 30px;
 }
-nav{
-    flex-direction:column;
-    gap:18px;
+
+.position {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    line-height: 1.15;
+    color: #17345c;
+    margin-bottom: 30px;
 }
+
+.research-summary {
+    max-width: 590px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.5rem;
+    line-height: 1.45;
+
+    color: #31445e;
+
+    margin-bottom: 38px;
 }
+
+.research-summary strong {
+    font-weight: 600;
+}
+
+.links {
+    display: flex;
+    gap: 27px;
+    flex-wrap: wrap;
+}
+
+.links a {
+    color: #17345c;
+    text-decoration: none;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+
+    letter-spacing: 0.06em;
+
+    border-bottom: 1px solid #b68a4b;
+    padding-bottom: 5px;
+
+    transition: opacity 0.2s ease;
+}
+
+.links a:hover {
+    opacity: 0.55;
+}
+
+
+/* RIGHT-SIDE PORTRAIT */
+
+.hero-photo {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+
+    /*
+       Adjust this if you want your face slightly
+       farther left or right.
+    */
+    object-position: center center;
+}
+
+
+/* ------------------------------
+   MOBILE
+------------------------------ */
+
+@media (max-width: 900px) {
+
+    .topbar {
+        position: relative;
+        padding: 22px 7%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-copy {
+        order: 2;
+        padding: 55px 8% 70px;
+    }
+
+    .hero-photo {
+        order: 1;
+        width: 100%;
+        height: 65vh;
+        min-height: 500px;
+    }
+
+    .hero-photo img {
+        object-position: center 25%;
+    }
+
+    h1 {
+        font-size: clamp(4rem, 17vw, 6rem);
+    }
+
+    .position {
+        font-size: 1.7rem;
+    }
+
+    .research-summary {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* SMALL PHONE */
+
+@media (max-width: 520px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+    .hero-photo {
+        height: 55vh;
+        min-height: 420px;
+    }
+
+    .hero-copy {
+        padding: 45px 7% 60px;
+    }
+
+    .eyebrow {
+        font-size: 0.67rem;
+    }
+
+}
+
 </style>
+
 </head>
 
+
 <body>
-<section class="hero">
-<div class="content">
+
+
+<!-- ==============================
+     NAVIGATION
+============================== -->
+
+<header class="topbar">
+
+<a class="brand" href="index.html">
+HWAYEON MYEONG
+</a>
+
+<nav>
+
+<a href="story.html">My Story</a>
+
+<a href="Hwayeon_Myeong_CV.pdf?v=20260913"
+target="_blank">
+CV
+</a>
+
+<a href="https://scholar.google.com/citations?user=lbe5XxYAAAAJ&hl=en&oi=ao"
+target="_blank">
+Scholar
+</a>
+
+<a href="mailto:hm60@rice.edu">
+Contact
+</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- ==============================
+     HERO
+============================== -->
+
+<main class="hero">
+
+
+<!-- LEFT -->
+
+<section class="hero-copy">
+
+<div class="hero-copy-inner">
+
+<div class="eyebrow">
+SOCIAL PSYCHOLOGY &nbsp; / &nbsp; IDENTITY &nbsp; / &nbsp; EQUITY
+</div>
 
 <h1>
 Hwayeon<br>
 Myeong
 </h1>
 
-<div class="line"></div>
+<div class="gold-line"></div>
 
-<div class="description">
-    Ph.D. Candidate<br>
-    Department of Psychological Sciences<br>
-    Rice University
+<div class="position">
+Ph.D. Candidate<br>
+Rice University
 </div>
 
-<nav>
-    <a href="Hwayeon_Myeong_CV.pdf?v=20260913" target="_blank">CV</a>
-    <a href="https://scholar.google.com/citations?user=lbe5XxYAAAAJ&hl=en&oi=ao"
-        target="_blank">Google Scholar</a>
-    <a href="mailto:hm60@rice.edu">Contact</a>
-</nav>
+
+<div class="research-summary">
+
+I study how social contexts shape people's identity experiences,
+how people make meaning of who they are, and how
+identity-focused interventions can promote more equitable outcomes.
+
 </div>
+
+
+<div class="links">
+
+<a href="story.html">
+MY STORY
+</a>
+
+<a href="Hwayeon_Myeong_CV.pdf?v=20260913"
+target="_blank">
+CV
+</a>
+
+<a href="https://scholar.google.com/citations?user=lbe5XxYAAAAJ&hl=en&oi=ao"
+target="_blank">
+GOOGLE SCHOLAR
+</a>
+
+<a href="mailto:hm60@rice.edu">
+CONTACT
+</a>
+
+</div>
+
+</div>
+
 </section>
+
+
+
+<!-- RIGHT -->
+
+<section class="hero-photo">
+
+<img
+src="portrait_blacksuit.jpg"
+alt="Hwayeon Myeong at Rice University">
+
+</section>
+
+
+</main>
+
 </body>
+
 </html>
