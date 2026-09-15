@@ -91,9 +91,9 @@ nav a:hover {
 
 .page-intro {
     text-align: center;
-    max-width: 1180px;
+    max-width: 1450px;
     margin: 0 auto;
-    padding: 70px 6% 55px;
+    padding: 70px 3% 55px;
 }
 
 .page-label {
@@ -123,12 +123,21 @@ h1 {
 
 .subtitle {
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 1.45rem;
+    font-size: 1.35rem;
     line-height: 1.5;
     font-style: italic;
     color: #45566d;
-    max-width: 1000px;
+
+    max-width: none;
+    white-space: nowrap;
     margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+    .subtitle {
+        white-space: normal;
+        max-width: 900px;
+    }
 }
 /* --------------------------
    STORY SECTION
